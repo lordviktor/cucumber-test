@@ -1,0 +1,215 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+/* ====================================================================
+ * Estilos gerais.
+ * ====================================================================
+ */
+body {
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 12px;
+	color: #363636;
+	background-image:url(../images/bg.png);
+}
+
+h1, h2, h3, h4 {
+	font-weight: bolder;
+	text-shadow:2px 2px white;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+h4 { font-size: 14px; }
+h3 { font-size: 16px; }
+h2 { font-size: 18px; }
+h1 { font-size: 20px; } 
+
+.message {
+	border:1px solid #e9e9e9;
+	background-color:#FFFFFF;
+	background-image:url(../images/warning.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 40px;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+}
+
+.message p {
+	margin: 13px 0px 5px 40px;
+}
+
+.center_aligned { text-align:center; }
+
+.right_aligned 	{ text-align:right; }
+
+.left_aligned 	{ text-align:left; }
+
+a:link {
+	font-family: Tahoma, Verdana, Arial;
+}
+
+
+/*
+ * Form.
+ */ 
+div.form {
+	padding:0px;
+	width: 100%;
+}
+
+div.form ol {
+	line-height: 1.5em;
+	list-style: none;
+	margin: 10px 0px 10px 10px;
+	padding: 0px;
+}
+
+div.form ol li {
+	clear: both;
+	margin: 0 0 .75em;
+	padding: 3;
+}
+
+div.form label {
+	font-size:12px;
+	font-weight: bolder;
+	display: block;
+	float:left;
+	line-height:1.6em;
+	margin-top: 3px;
+	margin-right: 5px;
+	text-align: right;
+	width: 150px;
+}
+
+div.form input[type=text], div.form input[type=password], div.form input[type=email], div.form textarea {
+	border:1px solid silver;
+	height: 20px;
+	border-radius:7px;
+	-moz-border-radius:7px;
+}
+
+div.form input[type=text], div.form input[type=password], div.form textarea, div.form input[type=email], div.form textarea {
+	width: 330px;
+}
+
+div.form textarea {
+	height: 150px;
+}
+
+div.form input[type=checkbox], div.form input[type=submit], div.controls {
+	margin-left: 155px;
+}
+
+div.form input[type=radio] { margin-top:6px; }
+
+div.form select {
+	border:1px solid silver;
+	width: 234px;
+	border-radius: 7px;
+	height: 23px;
+	-moz-border-radius: 7px;
+}
+
+div.form input[type=file] {
+	width:230px;
+}
+
+/*
+ * Erros.
+ */
+.errorExplanation {
+	border:1px solid red;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	background-color: #ffffff;
+	margin-bottom:10px;
+}
+
+.errorExplanation h2 {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;	
+	-moz-border-radius-topright: 6px;	
+	text-shadow:0px 0px; 
+	background-color:red;
+	color: white;
+	font-size: 12px;
+	font-weight: bolder;
+	margin-top: 0px;
+	padding-left: 5px;
+	line-height: 1.7em;
+}
+
+.errorExplanation p {
+	padding-left: 5px;
+}
+
+/*
+ * Grid.
+ */
+.grid table { 
+	width: 100%; 
+	border:1px solid #d9d9d9;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+
+}
+
+.grid th { 
+	clear:both;
+	font-size:12px;
+	border-bottom: 1px solid #d9d9d9; 
+	padding: 10px 3px 10px 3px;
+	background-image:url(../images/headbg.png);
+
+}
+
+.grid td {
+	padding: 10px 3px 10px 3px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #e9e9e9;
+	font-size: 12px;
+}
+
+.grid td a { color: #363636; }
+
+.grid thead tr:first-child th:first-child {
+	border-top-left-radius:7px;
+	-moz-border-radius-topleft:7px;	
+}
+
+.grid thead tr:first-child th:last-child {
+	border-top-right-radius:7px;
+	-moz-border-radius-topright:7px;
+}
+
+.grid tbody tr:last-child td:first-child {
+	border-bottom-left-radius:7px;
+	-moz-border-radius-bottomleft:7px;	
+}
+
+.grid tbody tr:last-child td:last-child {
+	border-bottom-right-radius:7px;
+	-moz-border-radius-bottomright:7px;	
+}
+
+.grid tbody tr:last-child td { border: 0px; }
+
+.grid .result_line {
+	border-bottom: 0px;
+	background-color: #f6f6f6;
+	font-weight: bolder;	
+}
+
+small { 
+	color: gray;
+	font-size: 10px;
+	font-style: italic;
+}
