@@ -70,12 +70,12 @@ public class CasoTestesController {
 				
 		final CasoTeste casoMesmoNome = this.casoTesteDAO.consultar(plano_teste_id, casoTeste.getTitulo());
 		
-		// Valida se os atributos obrigórios foram preenchidos.
+		// Valida se os atributos obrigï¿½rios foram preenchidos.
 		this.validator.checking(new Validations() {{				
-			that(!casoTeste.getTitulo().isEmpty(),"O título do Caso de Teste é obrigatório!","titulo");
-			that(!casoTeste.getDescricao().isEmpty(),"A descrição do Caso de Teste é obrigatória!","descricao");
-			that(!casoTeste.getCaso().isEmpty(),"O caso do Caso de Teste é obrigatória!","caso");
-			that(casoMesmoNome == null,"Já existe um caso de teste cadastrado com esse título para esse plano de teste!","titulo");
+			that(!casoTeste.getTitulo().isEmpty(),"O tï¿½tulo do Caso de Teste ï¿½ obrigatï¿½rio!","titulo");
+			that(!casoTeste.getDescricao().isEmpty(),"A descriï¿½ï¿½o do Caso de Teste ï¿½ obrigatï¿½ria!","descricao");
+			that(!casoTeste.getCaso().isEmpty(),"O caso do Caso de Teste ï¿½ obrigatï¿½ria!","caso");
+			that(casoMesmoNome == null,"Jï¿½ existe um caso de teste cadastrado com esse tï¿½tulo para esse plano de teste!","titulo");
 		}});
 						
 		// Retorna para a tela de cadastro caso haja algum erro de preenchimento.
@@ -104,12 +104,12 @@ public class CasoTestesController {
 																	casoTeste.getId(), 
 																	casoTeste.getTitulo());
 		
-		// Valida se os atributos obrigórios foram preenchidos.
+		// Valida se os atributos obrigï¿½rios foram preenchidos.
 		this.validator.checking(new Validations() {{				
-			that(!casoTeste.getTitulo().isEmpty(),"O título do Caso de Teste é obrigatório!","titulo");
-			that(!casoTeste.getDescricao().isEmpty(),"A descrição do Caso de Teste é obrigatória!","descricao");
-			that(!casoTeste.getCaso().isEmpty(),"O caso do Caso de Teste é obrigatória!","caso");
-			that(casoMesmoNome == null,"Já existe um caso de teste cadastrado com esse título para esse plano de teste!","titulo");
+			that(!casoTeste.getTitulo().isEmpty(),"O tï¿½tulo do Caso de Teste ï¿½ obrigatï¿½rio!","titulo");
+			that(!casoTeste.getDescricao().isEmpty(),"A descriï¿½ï¿½o do Caso de Teste ï¿½ obrigatï¿½ria!","descricao");
+			that(!casoTeste.getCaso().isEmpty(),"O caso do Caso de Teste ï¿½ obrigatï¿½ria!","caso");
+			that(casoMesmoNome == null,"Jï¿½ existe um caso de teste cadastrado com esse tï¿½tulo para esse plano de teste!","titulo");
 		}});
 
 		// Retorna para a tela de cadastro caso haja algum erro de preenchimento.
@@ -156,7 +156,7 @@ public class CasoTestesController {
 			message = CucumberUtil.executeCucumber();
 			log.setMensagem(message);
 			
-			exception = (message.indexOf("failed") == 0);
+			exception = (message.indexOf("failed") != -1);
 				
 		} catch (IOException e) {
 			
